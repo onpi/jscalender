@@ -1,0 +1,40 @@
+@import './footer.scss';
+@import './menu.scss';
+
+.now {
+  font-size: 20px;
+  text-align: center;
+}
+.calender_table {
+  margin: 20px auto 0;
+  max-width: 600px;
+  width: 95%;
+  .day,.date {
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    &:first-child {
+      color: red;
+    }
+    &:last-child {
+      color: royalblue;
+    }
+  }
+}
+.btn_wrap {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto 0;
+  max-width: 800px;
+  .btn {
+    background-color: green;
+    border: 1px solid green;
+    color: #fff;
+    padding: 5px 10px;
+    &:hover {
+      color: green;
+      background-color: #fff;
+    }
+  }
+}

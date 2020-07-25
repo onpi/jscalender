@@ -5,6 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 // const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
+  watch: true,
   mode: 'development',
   devtool: 'source-map',
   entry: './src/javascripts/main.js',
@@ -14,15 +15,6 @@ module.exports = {
   },
   module: {
     rules: [
-      // {
-      //   test: /\.vue/,
-      //   exclude: /node_modules/,
-      //   use: [
-      //     {
-      //       loader: 'vue-loader',
-      //     }
-      //   ]
-      // },
       {
         test: /\.js/,
         exclude: /node_modules/,
@@ -81,19 +73,12 @@ module.exports = {
   plugins: [
     // new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
-      filename: './stylesheets/main.css',
+      filename: './stylesheets/style.css',
     }),
+    
     new HtmlWebpackPlugin({
-      template: './src/templates/index.pug',
+      template: './src/templates/index.html',
       filename: 'index.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/templates/access.pug',
-      filename: 'access.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/templates/members/taro.pug',
-      filename: 'members/taro.html',
     }),
     new CleanWebpackPlugin(),
   ],
